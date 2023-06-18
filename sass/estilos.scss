@@ -5,12 +5,208 @@
     border: 0;
   }
   
-  @import 'nav';
-  @import 'm';
-  @import 'pdp';
-  @import 'sobrenosotros';
-  @import 'sede';
-  @import 'login';
+   $colores: (
+      bg1: black,
+      bg2: #AD7315,
+      bg3: #E0951B,
+      bg4: #FAD8A2,
+  );
+  
+  $box: 0px 10px 30px whitesmoke;
 
 
-  @import 'media';
+  @keyframes mi-efecto {
+    /* from */ 0% {
+    opacity: 0%;
+     }
+    
+ /* to */ 100% {
+ opacity: 90%;
+ }
+ }
+
+     /* Nav */
+
+     .navBar a:hover {
+        background-color: #AD7315;
+        color: #FAD8A2;
+    }
+    
+    .title {
+        color: map-get($colores , bg1 );
+        background-color: antiquewhite;
+        text-align: center;
+        margin-top: 3%;
+        font-family: sans-serif;
+     }
+    
+    .bg-propio {
+        background-color: map-get($colores , bg1 );
+    }
+    
+    .bg-mine {
+        background-color: burlywood ;
+    }
+    
+    .fondo {
+        background-image: url(../imagenes/fondo.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+       
+    }
+   
+     
+
+  .texto1 {
+    color: map-get($colores , bg1 );
+  margin: 9% 11% 5% 19%;
+  padding: 4%;
+  opacity: 90%;
+    & .txt1 {
+        background-color: map-get($colores , bg2 );
+  opacity: 90%;
+  text-align: start;
+  padding: 2%;
+  animation: mi-efecto;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    & .txt2{
+        background-color: map-get($colores, bg3);
+        opacity: 90%;
+        text-align: center;
+        padding: 2%;
+        animation-name: mi-efecto;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    & .txt3{
+        background-color: map-get($colores , bg4);
+        opacity: 90%;
+        padding: 2%;
+        text-align: end;
+        animation-name: mi-efecto;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+  }
+
+    /* Login */
+
+.Login {
+    width: 60%;
+    background-color: burlywood;
+    padding: 60px ;
+    margin: 8% 20% 4%;
+    border-radius: 4px;
+    font-size: larger;
+    box-shadow: $box;
+    font-family: 'Times New Roman', Times, serif;
+    & .btn-enviar{
+      background-color: map-get($colores , bg3 );
+      color: map-get($colores, bg1 );
+      border-radius: 25px;
+      padding: 2%;
+      display: inline-block;
+      text-decoration: none;
+      border: 1px solid;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 18px;
+      text-align: center;
+      
+  }
+}
+
+  .field {
+    width: 100%;
+    padding: 1%;
+    margin-bottom: 16px;
+    font-size: 15px;
+    opacity: 70%;
+    color: map-get($colores , bg1);
+  }
+ 
+  
+    /* Sede */
+  
+  section.sede {
+    display: grid;
+    color: map-get($colores , bg1 );
+    padding: 3rem;
+    
+  }
+  .box1 {
+    background-color: map-get($colores, bg3 );
+    padding: 20px;
+    text-align: center;
+    grid-row: 2/3;
+    font-size: large;
+    opacity: 75%;
+  }
+  
+  .box2 {
+    background-color: map-get($colores, bg4 );
+    padding: 20px;
+    text-align: center;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    font-size: large;
+    opacity: 75%;
+  }
+
+   /* Sobre nosotros*/
+
+section {
+    &.historia {
+    display: flex;
+    gap: 50px;
+    padding: 2.5rem;
+    align-items: center;
+    flex-direction: row;
+     .historia-img {
+        width: 100%;
+        height: auto;
+        img {
+            width: 100%;
+            height: auto;
+            box-shadow: $box;
+            } 
+    }
+   
+}
+  
+  &.historia.invertir {
+    flex-flow: row-reverse;
+    align-items: center;
+  }
+
+  
+  & .historia-info {
+    background-color: map-get($colores , bg4 );
+    padding: 60px;;
+    border-radius: 3%;
+    box-shadow: $box;
+    h2 {
+      color: map-get($colores, bg2 );
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+    }
+    p {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: italic;
+    }
+  }
+
+}
+
+
+
+@import 'media';
