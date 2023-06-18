@@ -1,0 +1,22 @@
+/* Pase de Prueba */
+
+
+.box1 {
+    background-color: #E0951B;
+    padding: 20px;
+    text-align: center;
+    grid-row: 2/3;
+    font-size: large;
+    opacity: 75%;
+  }
+  
+  .box2 {
+  
+    background-color: #FAD8A2;
+    padding: 20px;
+    text-align: center;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    font-size: large;
+    opacity: 75%;
+  }
