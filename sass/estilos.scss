@@ -34,7 +34,7 @@
     
     .title {
         color: map-get($colores , bg1 );
-        background-color: antiquewhite;
+        background-color: #AD7315;
         text-align: center;
         margin-top: 3%;
         font-family: sans-serif;
@@ -121,7 +121,9 @@
       font-family: 'Times New Roman', Times, serif;
       font-size: 18px;
       text-align: center;
-      
+      a:hover {
+        background-color: blue;
+      }
   }
 }
 
@@ -206,7 +208,19 @@ section {
   }
 
 }
+/* actividades */
+.carImg {
+  width: 60%;
+  margin: 2% 4% 7% 19%;
+}
 
-
+.actividades_txt {
+  background-color: #AD7315;
+  & h3 {
+    color: black;
+    opacity: 100%;
+    text-align: center
+  }
+}
 
 @import 'media';
