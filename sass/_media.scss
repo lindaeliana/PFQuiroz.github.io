@@ -25,9 +25,7 @@
       display: flex;
       flex-flow: column-reverse;
     }
-      .texto1 { 
-      margin: 26% 21% 9% 19%;
-    }
+      
     }
     
     @media (min-width: 577px) {
@@ -35,8 +33,4 @@
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 2fr 2fr;
     }
-    
-    .texto1 { 
-      margin: 6% 4% 6% 8%;
-    }
-    }
+  }

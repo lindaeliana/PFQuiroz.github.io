@@ -42,6 +42,7 @@
     
     .bg-propio {
         background-color: map-get($colores , bg1 );
+        opacity: 85%;
     }
     
     .bg-mine {
@@ -54,21 +55,39 @@
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: center;
+        height: 100vh;
        
     }
    
+    .background-Opacity {
+      background: rgba(0,0,0,0.6);
+      height: 100vh;
+    }
      
+    .burger-color {
+      filter: invert(1);
+    }
+
+    .burger-size {
+      width: 35px;
+    }
+
+    .SectionPosition{
+      height: 65%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
   .texto1 {
     color: map-get($colores , bg1 );
-  margin: 9% 11% 5% 19%;
-  padding: 4%;
+  width: 70%;
   opacity: 90%;
     & .txt1 {
         background-color: map-get($colores , bg2 );
   opacity: 90%;
-  text-align: start;
-  padding: 2%;
+  padding: 1%;
+  text-align: left;
   animation: mi-efecto;
   animation-duration: 2s;
   animation-timing-function: linear;
@@ -78,8 +97,8 @@
     & .txt2{
         background-color: map-get($colores, bg3);
         opacity: 90%;
+        padding: 1%;
         text-align: center;
-        padding: 2%;
         animation-name: mi-efecto;
         animation-duration: 2s;
         animation-iteration-count: 1;
@@ -87,10 +106,10 @@
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
     & .txt3{
-        background-color: map-get($colores , bg4);
+        background-color: #b77408;
         opacity: 90%;
-        padding: 2%;
-        text-align: end;
+        padding: 1%;
+        text-align: right;
         animation-name: mi-efecto;
         animation-duration: 2s;
         animation-timing-function: linear;
